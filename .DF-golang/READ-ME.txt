@@ -1,0 +1,33 @@
+# CONFIGURACAO DAS VARIAVEI DE AMBIENTE DO GO
+
+  Para que a linguagem rode no sistema, deve-se configurar
+ uma variavel de ambiente, dentro do .profile.
+
+  As instrucoes sao:
+
+  1- Abra o profile com nano
+    [ nano ~/.profile ]
+
+  2- Acrescente, no final do arquivo, a linha:
+    [ export PATH=$PATH:/usr/local/go/bin ]
+
+  3- Rode novamente o arquivo com:
+    [ source ~/.profile ]
+
+  Pronto, agora é verificar se esta rodando com o comando 
+    [ go version ]
+
+ -=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=-
+  A flag para criar um container com o volume de uma pasta
+ no host é:
+    [ -v /pasta-host:/pasta-container ] 
+
+  Exemplo de criacao do container:
+  [docker run -it --name gontainer -v /home/tempo/Documentos/Estudos/Teste-Dockfile/application:/go-workspace golang]
+
+ -=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=-
+ A estrutura de pastas do workspace pode ser algo como:
+
+ src/ == codigo fonte aplicacao
+ pkg/ == pacotes compilados 
+ bin/ == binarios executaveis da aplicacao
